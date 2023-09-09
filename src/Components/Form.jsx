@@ -1,6 +1,5 @@
 import React from "react";
 import { useState } from "react";
-import styles from './Form.module.css'
 
 
 
@@ -42,29 +41,29 @@ return (
 
   // Pasamos el manejador al evento unSubmit
 
-  <form onSubmit={handleSubmit} className={styles.formulario}>
+  <form onSubmit={handleSubmit} >
 
-      <div className={styles.formFondo}>
+      <div>
 
-          <div className={styles.formInterior}>
+          <div>
               
-              <input type="text" id="nombreCompleto" className={styles.input} placeholder="Nombre completo" onChange={(e) => setUsuario({ ...usuario, nombreCompleto: e.target.value })} />
+              <input type="text" id="nombreCompleto" placeholder="Nombre completo" onChange={(e) => setUsuario({ ...usuario, nombreCompleto: e.target.value })} />
           </div>
-          <div className={styles.formInterior}>
+          <div>
               
-              <input type="email" id="email" className={styles.input} placeholder="Email" onChange={(e) => setUsuario({ ...usuario, email: e.target.value })} />
+              <input type="email" id="email"  placeholder="Email" onChange={(e) => setUsuario({ ...usuario, email: e.target.value })} />
           </div>
           
 
           {/* Mediante el type nos aseguramos que se dispare el evento onSubmit al hacer click en el botón */}
 
-          <button className={styles.button}>Enviar</button>
+          <button>Enviar</button>
 
       </div>
 
-      <div className={styles.render}>
+      <div>
 
-          {error && <h4 className={styles.error}>Por favor verifique su información nuevamente</h4>}
+          {error && <h4>Por favor verifique su información nuevamente</h4>}
 
 
           {show && <p>Gracias {usuario.nombreCompleto}, te contactaremos cuanto antes vía mail</p> && console.log("Nombre completo: " + usuario.nombreCompleto + ". " + "Email: " + usuario.email )}
