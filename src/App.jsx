@@ -14,7 +14,6 @@ function App() {
     <div className="App">
       <Layout>
         <Navbar />
-        <Footer />        
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/home' element={<Home />} />
@@ -22,6 +21,7 @@ function App() {
           <Route path='/detail/:id' element={<Detail />} />
           <Route path='/favs' element={<Favs />} />
         </Routes>
+        <Footer />  
       </Layout>
 
     </div>
