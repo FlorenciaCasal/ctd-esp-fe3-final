@@ -22,9 +22,11 @@ const Form = () => {
         e.preventDefault()
 
         const nombreSinEspacios = usuario.nombreCompleto.trim();
+        const emailSinEspacios = usuario.email.trim();
+        const regex  = new RegExp(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/);
 
 
-        if ((nombreSinEspacios.length > 5) && (usuario.email == /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/)) {
+        if ((nombreSinEspacios.length > 5) && (regex.test(emailSinEspacios))) {
 
             setShow(true)
             setError(false)
@@ -63,7 +65,7 @@ const Form = () => {
 
                 {error && <h4>Por favor verifique su información nuevamente</h4>}
 
-                {show && <p>Gracias {usuario.nombreCompleto}, te contactaremos cuanto antes vía mail</p> && console.log("Nombre completo: " + usuario.nombreCompleto + ". " + "Email: " + usuario.email)}
+                {show && <p>Gracias {usuario.nombreCompleto}, te contactaremos cuanto antes vía mail</p>}
             </div>
 
         </form>

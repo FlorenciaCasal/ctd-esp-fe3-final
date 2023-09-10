@@ -36,7 +36,7 @@ const Detail = () => {
         <h1>Email: {detail.email}</h1>
         <h1>Teléfono: {detail.phone}</h1>
         <h1>Sitio Web: {detail.website}</h1>
-      </div> 
+      </div>
     </>
   )
 }
