@@ -4,12 +4,12 @@ export const GlobalStates = createContext();
 
 export const themes = {
     light: {
-        font: 'black',
+        font: '#1A1919',
         background: 'white'
     },
     dark: {
-        font: 'white',
-        background: 'black'
+        font: '#F0EDED',
+        background: '#1A1919'
     }
 }
 

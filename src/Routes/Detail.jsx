@@ -32,10 +32,10 @@ const Detail = () => {
       {/* Deberan mostrar el name - email - phone - website por cada user en especifico */}
       <h1>Detalle</h1>
       <div>
-        <h1>Nombre: {detail.name}</h1>
-        <h1>Email: {detail.email}</h1>
-        <h1>Teléfono: {detail.phone}</h1>
-        <h1>Sitio Web: {detail.website}</h1>
+        <h2>Nombre: {detail.name}</h2>
+        <h2>Email: {detail.email}</h2>
+        <h2>Teléfono: {detail.phone}</h2>
+        <h2>Sitio Web: {detail.website}</h2>
       </div>
     </>
   )

@@ -5,8 +5,14 @@ import DH from './img/DH.png'
 const Footer = () => {
   return (
     <footer>
-      <p>Powered by</p>
-      <img src={DH}/>
+      <div>
+        <h4>By: Florencia Casal & Luz Acosta  </h4>
+      </div>
+      <div>
+        <h5>Powered by</h5>
+        <img src={DH}/>
+      </div>
+      
     </footer>
   )
 }

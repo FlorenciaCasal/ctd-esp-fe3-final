@@ -22,10 +22,10 @@ const Navbar = () => {
     <nav>
 
       <div style={{ display: 'flex', justifyContent: 'center' }}>
-        <button onClick={() => navigate(-1)}>⬅Back</button>
+        <button onClick={() => navigate(-1)}> ⬅ </button>
         {enlaces.map((enlace, indice) => (
-          <Link to={enlace.route} key={indice}>
-            <h4 style={{ margin: 10 }} >{enlace.titulo}</h4>
+          <Link to={enlace.route} key={indice} >
+            <h4 style={{ margin: 10}} >{enlace.titulo}</h4>
           </Link>
         ))}
 
@@ -37,7 +37,7 @@ const Navbar = () => {
       <button
         onClick={handleChangeTheme}
         style={{ background: theme.background, color: theme.font }}>
-        Change Theme
+        Tema
       </button>
 
     </nav>
