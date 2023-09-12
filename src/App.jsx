@@ -6,26 +6,24 @@ import Contact from './Routes/Contact'
 import Detail from './Routes/Detail'
 import Favs from './Routes/Detail'
 import Home from './Routes/Home'
-import Layout from './Components/Layout';
+// import Layout from './Components/Layout';
 
 
 function App() {
   return (
-    <div className="App">
-      <Layout>
-        <Navbar />
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/home' element={<Home />} />
-          <Route path='/contact' element={<Contact />} />
-          <Route path='/detail/:id' element={<Detail />} />
-          <Route path='/favs' element={<Favs />} />
-        </Routes>
-        <Footer />  
-      </Layout>
 
-    </div>
-  );
+    <>
+      <Navbar />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        {/* <Route path='/home' element={<Home />} /> */}
+        <Route path='/contact' element={<Contact />} />
+        <Route path='/detail/:id' element={<Detail />} />
+        <Route path='/favs' element={<Favs />} />
+      </Routes>
+      <Footer />
+    </>
+  )
 }
 
 export default App;

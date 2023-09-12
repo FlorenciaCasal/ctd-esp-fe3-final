@@ -1,14 +1,14 @@
-import React from 'react'
-import { useGlobalStates } from '../Context/Context'
+// import React from 'react'
+// import { useDentistaStates } from '../Context/Context'
 
 
-const Layout = ({ children }) => {
-    const { theme } = useGlobalStates();
-    return (
-        <div style={{ background: theme.background, color: theme.font }}>
-            {children}
-        </div>
-    )
-}
+// const Layout = ({ children }) => {
+//     const { theme } = useDentistaStates();
+//     return (
+//         <div style={{ background: theme.background, color: theme.font }}>
+//             {children}
+//         </div>
+//     )
+// }
 
-export default Layout
+// export default Layout

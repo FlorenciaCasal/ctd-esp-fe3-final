@@ -13,17 +13,17 @@ const Detail = () => {
 
   // Consumiendo el parametro dinamico de la URL deberan hacer un fetch a un user en especifico
 
-  const [detail, setDetail] = useState({})
+  const [dentista, setDentista] = useState({})
   // const {favs, setFavs} = useRecipeStates()
   //  console.log(favs)
-  const { id } = useParams()
-  console.log(id)
+  const {id} = useParams()
+  console.log({id})
 
   const url = `https://jsonplaceholder.typicode.com/users/${id}`
 
   useEffect(() => {
     axios(url)
-      .then(res => setDetail(res.data))
+      .then(res => setDentista(res.data))
   }, [])
 
   return (
@@ -32,10 +32,10 @@ const Detail = () => {
       {/* Deberan mostrar el name - email - phone - website por cada user en especifico */}
       <h1>Detalle</h1>
       <div>
-        <h1>Nombre: {detail.name}</h1>
-        <h1>Email: {detail.email}</h1>
-        <h1>Teléfono: {detail.phone}</h1>
-        <h1>Sitio Web: {detail.website}</h1>
+        <h1>Nombre: {dentista.name}</h1>
+        <h1>Email: {dentista.email}</h1>
+        <h1>Teléfono: {dentista.phone}</h1>
+        <h1>Sitio Web: {dentista.website}</h1>
       </div>
     </>
   )

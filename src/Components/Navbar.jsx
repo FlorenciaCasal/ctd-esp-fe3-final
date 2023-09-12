@@ -1,17 +1,17 @@
 import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { useGlobalStates } from '../Context/Context'
+// import { useGlobalState } from '../Context/Context'
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
 const Navbar = () => {
 
-  const { theme, handleChangeTheme } = useGlobalStates();
+ // const { theme, handleChangeTheme } = useGlobalState();
 
   const enlaces = [
     { titulo: 'Home', route: '/' },
     { titulo: 'Contact', route: '/contact' },
-    { titulo: 'Detail', route: '/detail' },
+    // { titulo: 'Detail', route: '/detail' },
     { titulo: 'Favs', route: '/favs' }
 
   ]
@@ -34,11 +34,11 @@ const Navbar = () => {
       {/* Aqui deberan agregar los liks correspondientes a las rutas definidas */}
       {/* Deberan implementar ademas la logica para cambiar de Theme con el button */}
 
-      <button
+      {/* <button
         onClick={handleChangeTheme}
         style={{ background: theme.background, color: theme.font }}>
         Change Theme
-      </button>
+      </button> */}
 
     </nav>
   )
