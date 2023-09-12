@@ -10,6 +10,7 @@ const Form = () => {
     const [usuario, setUsuario] = useState({
         nombreCompleto: '',
         email: '',
+        comentarios:''
 
     })
 
@@ -45,19 +46,14 @@ const Form = () => {
 
         <form onSubmit={handleSubmit} >
 
-            <div>
-
-                <div>
+            <div className="formContact">
                     <input type="text" id="nombreCompleto" placeholder="Nombre completo" onChange={(e) => setUsuario({ ...usuario, nombreCompleto: e.target.value })} />
-                </div>
-
-                <div>
                     <input type="email" id="email" placeholder="Email" onChange={(e) => setUsuario({ ...usuario, email: e.target.value })} />
-                </div>
+                    <input type="textarea "  rows="10" cols="40" maxlength="70"  name="comentarios" placeholder="Comentarios" onChange={(e) => setUsuario({ ...usuario, comentarios: e.target.value })}/>
 
                 {/* Mediante el type nos aseguramos que se dispare el evento onSubmit al hacer click en el botón */}
 
-                <button>Enviar</button>
+                <button className="enviar">Enviar</button>
 
             </div>
 

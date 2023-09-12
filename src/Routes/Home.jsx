@@ -7,8 +7,6 @@ import { useDentistaStates } from '../Context/Context';
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
 const Home = () => {
-
-  const {dentistas}= useDentistaStates()
   //const { theme, handleChangeTheme } = useGlobalStates();
 
   // const [dentistas,setDentista] = useState([])
@@ -25,7 +23,7 @@ const Home = () => {
   // },[])
 
   return (
-   // <main className="" >
+    <main className="" >
       
       <div className='card-grid'>
         {/* Aqui deberias renderizar las cards */}
