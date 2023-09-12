@@ -19,7 +19,7 @@ const Navbar = () => {
   const navigate = useNavigate()
 
   return (
-    <nav>
+   <nav>
 
       <div style={{ display: 'flex', justifyContent: 'center' }}>
         <button onClick={() => navigate(-1)}> ⬅ </button>
@@ -37,13 +37,8 @@ const Navbar = () => {
       {/* <button
         onClick={handleChangeTheme}
         style={{ background: theme.background, color: theme.font }}>
-<<<<<<< HEAD
         Change Theme
       </button> */}
-=======
-        Tema
-      </button>
->>>>>>> 59ac49ee7942afcef441adb9e6c571d4767eb1b9
 
     </nav>
   )
