@@ -1,12 +1,13 @@
 import React from 'react'
-import DH from './img/DH.png'
+import DH from "../img/DH.png"
+
 
 
 const Footer = () => {
   return (
-    <footer>
+    <footer style={{display: 'flex', justifyContent: 'end'}} >
       <div>
-        <h4>By: Florencia Casal & Luz Acosta  </h4>
+        <h2>Florencia Casal & Luz Acosta  </h2>
       </div>
       <div>
         <h5>Powered by</h5>

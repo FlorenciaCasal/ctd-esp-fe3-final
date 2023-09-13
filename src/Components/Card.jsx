@@ -12,10 +12,21 @@ import { useDentistaStates } from "../Context/Context";
 const Card = ({dentista}) => {
   const {favs, setFavs} = useDentistaStates()
 
-  // const addFav = () => {
-  //   // Aqui iria la logica para agregar la Card en el localStorage
-  //   setFavs([...favs, dentista])
-  // }
+   const addFav = () => {
+     // Aqui iria la logica para agregar la Card en el localStorage
+     console.log(favs)
+     console.log(dentista.id)
+     //const dentistaAgregado= {...favs, dentista}
+      if (favs.find((dentFavoritos)=>dentFavoritos.id === dentista.id)){
+        alert("ya existe")
+      }else{
+        setFavs((prevFavs) => [...prevFavs, dentista]);
+        alert("Se agregó correctamente a Favoritos")
+      }
+   }
+ 
+
+
 
   return (
     <div className="card">
@@ -29,8 +40,8 @@ const Card = ({dentista}) => {
       </Link>
 
       {/* Ademas deberan integrar la logica para guardar cada Card en el localStorage */}
-      {/* <button onClick={addFav} className="favButton">Add fav</button> */}
-      <button onClick={() => setFavs((prevFavs) => [...prevFavs, dentista])}>⭐</button>
+       <button onClick={addFav} className="favButton">💗</button> 
+      {/*<button onClick={() => setFavs((prevFavs) => [...prevFavs, dentista])}>⭐</button>*/}
     </div>
   );
 };

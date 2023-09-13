@@ -9,10 +9,9 @@ const Navbar = () => {
  // const { theme, handleChangeTheme } = useGlobalState();
 
   const enlaces = [
-    { titulo: 'Home', route: '/' },
-    { titulo: 'Contact', route: '/contact' },
-    // { titulo: 'Detail', route: '/detail' },
-    { titulo: 'Favs', route: '/favs' }
+    { id:1, titulo: 'Home', route: '/' },
+    { id:2, titulo: 'Contact', route: '/contact' },
+    { id:3, titulo: 'Favs', route: '/favs' }
 
   ]
 
@@ -23,8 +22,8 @@ const Navbar = () => {
 
       <div style={{ display: 'flex', justifyContent: 'center' }}>
         <button onClick={() => navigate(-1)}> ⬅ </button>
-        {enlaces.map((enlace, indice) => (
-          <Link to={enlace.route} key={indice} >
+        {enlaces.map((enlace) => (
+          <Link to={enlace.route} key={enlace.id} >
             <h4 style={{ margin: 10}} >{enlace.titulo}</h4>
           </Link>
         ))}

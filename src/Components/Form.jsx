@@ -47,21 +47,24 @@ const Form = () => {
         <form onSubmit={handleSubmit} >
 
             <div className="formContact">
+                <div>
                     <input type="text" id="nombreCompleto" placeholder="Nombre completo" onChange={(e) => setUsuario({ ...usuario, nombreCompleto: e.target.value })} />
                     <input type="email" id="email" placeholder="Email" onChange={(e) => setUsuario({ ...usuario, email: e.target.value })} />
-                    <input type="textarea "  rows="10" cols="40" maxlength="70"  name="comentarios" placeholder="Comentarios" onChange={(e) => setUsuario({ ...usuario, comentarios: e.target.value })}/>
+                    <input type="textarea "  rows="10" cols="40" maxLength="70"  name="comentarios" placeholder="Comentarios" onChange={(e) => setUsuario({ ...usuario, comentarios: e.target.value })}/>
 
                 {/* Mediante el type nos aseguramos que se dispare el evento onSubmit al hacer click en el botón */}
 
+                </div>
                 <button className="enviar">Enviar</button>
+
 
             </div>
 
             <div>
 
-                {error && <h4>Por favor verifique su información nuevamente</h4>}
+                {error && <h4 className="msmerror">Por favor verifique su información nuevamente</h4>}
 
-                {show && <p>Gracias {usuario.nombreCompleto}, te contactaremos cuanto antes vía mail</p>}
+                {show && <p className="msmexito">Gracias {usuario.nombreCompleto}, te contactaremos cuanto antes vía mail</p>}
             </div>
 
         </form>

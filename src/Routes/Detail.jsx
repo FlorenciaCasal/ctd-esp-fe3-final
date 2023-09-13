@@ -16,10 +16,10 @@ const Detail = () => {
   const [dentista, setDentista] = useState({})
   // const {favs, setFavs} = useRecipeStates()
   //  console.log(favs)
-  const {id} = useParams()
-  console.log({id})
+  const params = useParams()
+  console.log(params)
 
-  const url = `https://jsonplaceholder.typicode.com/users/${id}`
+  const url = 'https://jsonplaceholder.typicode.com/users/' + params.id
 
   useEffect(() => {
     axios(url)
