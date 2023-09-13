@@ -14,9 +14,7 @@ const Card = ({dentista}) => {
 
    const addFav = () => {
      // Aqui iria la logica para agregar la Card en el localStorage
-     console.log(favs)
-     console.log(dentista.id)
-     //const dentistaAgregado= {...favs, dentista}
+    
       if (favs.find((dentFavoritos)=>dentFavoritos.id === dentista.id)){
         alert("ya existe")
       }else{
