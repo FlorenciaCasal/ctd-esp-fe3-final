@@ -3,7 +3,7 @@
 // mport { useGlobalStates } from '../Context/Context'
 import {Link} from 'react-router-dom'
 import { useDentistaStates } from "../Context/Context";
-
+import DC from "../img/doctor.jpg"
 
 
 
@@ -33,11 +33,15 @@ const Card = ({dentista}) => {
       {/* En cada card deberan mostrar en name - username y el id */}
       {/* No debes olvidar que la Card a su vez servira como Link hacia la pagina de detalle */}
 
-      <Link to={'/detail/' + dentista.id}>
-        <h2>{dentista.name}</h2>
-        <h3>{dentista.username}</h3>
-        <h1>{dentista.id}</h1>
+      <Link to={'/detail/' + dentista.id} >
+
+        <img src={DC} alt='foto'/>
       </Link>
+        <div className='texCard'>
+          <h2>{dentista.name}</h2>
+          <h3>{dentista.username}</h3>
+        </div>
+        
 
       {/* Ademas deberan integrar la logica para guardar cada Card en el localStorage */}
        <button onClick={addFav} className="favButton">💗</button> 
