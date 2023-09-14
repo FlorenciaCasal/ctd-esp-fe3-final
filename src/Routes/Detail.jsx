@@ -4,6 +4,7 @@ import React from 'react'
 import { useState } from 'react'
 import { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
+import { useDentistaStates } from '../Context/Context'
 
 
 
@@ -13,17 +14,21 @@ const Detail = () => {
 
   // Consumiendo el parametro dinamico de la URL deberan hacer un fetch a un user en especifico
 
-  const [dentista, setDentista] = useState({})
+  // const [dentista, setDentista] = useState({})
+  const {state, dispatch} = useDentistaStates()
+  const params = useParams()
+  const {name, email, phone, website} = state.dentista
+
+
   // const {favs, setFavs} = useRecipeStates()
   //  console.log(favs)
-  const params = useParams()
-  console.log(params)
 
   const url = 'https://jsonplaceholder.typicode.com/users/' + params.id
 
   useEffect(() => {
     axios(url)
-      .then(res => setDentista(res.data))
+      // .then(res => setDentista(res.data))
+      .then(res => dispatch({type: 'GET_DENTISTA', payload: res.data}))
   }, [])
 
   return (
@@ -32,10 +37,10 @@ const Detail = () => {
       {/* Deberan mostrar el name - email - phone - website por cada user en especifico */}
       <h1>Detalle</h1>
       <div>
-        <h1>Nombre: {dentista.name}</h1>
-        <h1>Email: {dentista.email}</h1>
-        <h1>Teléfono: {dentista.phone}</h1>
-        <h1>Sitio Web: {dentista.website}</h1>
+        <h1>Nombre: {name}</h1>
+        <h1>Email: {email}</h1>
+        <h1>Teléfono: {phone}</h1>
+        <h1>Sitio Web: {website}</h1>
       </div>
     </>
   )
