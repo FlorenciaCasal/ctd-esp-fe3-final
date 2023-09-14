@@ -32,7 +32,7 @@ const Form = () => {
 
             setShow(true)
             setError(false)
-           alert("👨🏼👩🏼usuario: " + usuario.nombreCompleto.trim() + " 📧mail: " + usuario.email + " 📣comentarios: " + usuario.comentarios)
+            console.log("👨🏼👩🏼usuario: " + usuario.nombreCompleto.trim() + " 📧mail: " + usuario.email + " 📣comentarios: " + usuario.comentarios)
             e.target.reset()
         }
         else {
@@ -68,6 +68,7 @@ const Form = () => {
                 {error && <h4 className="msmerror">Por favor verifique su información nuevamente</h4>}
 
                 {show && <p className="msmexito">Gracias {usuario.nombreCompleto}, te contactaremos cuanto antes vía mail</p>}
+                
                 
             </div>
 
