@@ -1,5 +1,7 @@
 import axios from 'axios'
 import { useContext, createContext, useReducer, useEffect } from 'react'
+import './context.css'
+
 
 const DentistaStates = createContext()
 // const reducer = (state, action) => {
@@ -10,31 +12,37 @@ const DentistaStates = createContext()
 //     //accion para cambiar de tema
 // }
 
-const localFavs = JSON.parse(localStorage.getItem('favs'))
-const initialFavState = localFavs ? localFavs : []
+const localFavs = JSON.parse(localStorage.getItem('favs'));
+const initialFavState = localFavs ? localFavs : [];
+const initialThemeState = localStorage.getItem('theme') || 'light';
 
 const initialState = {
     dentistas: [],
     dentista: {},
     favs: initialFavState,
-    theme: ''
+    theme: initialThemeState,
 }
 
 const reducer = (state, action) => {
-    switch(action.type){
+    switch (action.type) {
         case 'GET_DENTISTAS':
-            return {...state, dentistas: action.payload}
+            return { ...state, dentistas: action.payload }
         case 'GET_DENTISTA':
-            return {...state, dentista: action.payload}
+            return { ...state, dentista: action.payload }
         case 'ADD_FAV':
-            return {...state, favs: [...state.favs, action.payload]}
+            return { ...state, favs: [...state.favs, action.payload] }
         case 'DELETE_FAV':
-            return {...state, favs: state.favs.filter(fav => fav.id !== action.payload.id)}
-            // return {...state, favs: action.payload} otra alternativa
-        case 'SWITCH_THEME':
-            return  {...state, theme: !state.theme}
-        // default:
-        //     throw new Error()
+            return { ...state, favs: state.favs.filter(fav => fav.id !== action.payload.id) }
+        // return {...state, favs: action.payload} otra alternativa
+        case 'TOGGLE_THEME':
+            const newTheme = state.theme === 'light' ? 'dark' : 'light';
+            localStorage.setItem('theme', newTheme);
+            return {
+                ...state,
+                theme: newTheme,
+            };
+        default:
+            throw new Error()
     }
     //accion para borrar favoritos
 }
@@ -49,7 +57,7 @@ const Context = ({ children }) => {
     useEffect(() => {
         axios(url)
             // .then(res => setDentistas(res.data))
-            .then(res => dispatch({ type: 'GET_DENTISTAS', payload: res.data}))
+            .then(res => dispatch({ type: 'GET_DENTISTAS', payload: res.data }))
     }, [])
 
     useEffect(() => {
@@ -58,9 +66,17 @@ const Context = ({ children }) => {
         localStorage.setItem('favs', JSON.stringify(state.favs))
     }, [state.favs])
 
+    useEffect(() => {
+        document.body.className = state.theme;
+      }, [state.theme]);
+
+      const toggleTheme = () => {
+        dispatch({ type: 'TOGGLE_THEME' });
+      };
+
     return (
         // <DentistaStates.Provider value={{ dentistas, favs, setFavs }}>
-        <DentistaStates.Provider value={{ state, dispatch }}>
+        <DentistaStates.Provider value={{ state, dispatch, toggleTheme }}>
             {children}
         </DentistaStates.Provider>
     )
