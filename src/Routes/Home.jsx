@@ -8,7 +8,8 @@ import { useDentistaStates } from '../Context/Context';
 
 const Home = () => {
 
-  const {dentistas} = useDentistaStates()
+  // const {dentistas} = useDentistaStates()
+  const {state} = useDentistaStates()
 
   //const { theme, handleChangeTheme } = useGlobalStates();
 
@@ -26,16 +27,16 @@ const Home = () => {
   // },[])
 
   return (
-    <main className="" >
+    // <main className="" >
       
       <div className='card-grid'>
         {/* Aqui deberias renderizar las cards */}
         {/* {dentistas.map((dentista) => <Card name={dentista.name} username={dentista.username} id={dentista.id}/>)} */}
 
-        {dentistas.map(dentista => (<Card dentista={dentista} key={dentista.id}/>))}
+        {state.dentistas.map(dentista => (<Card dentista={dentista} key={dentista.id}/>))}
         
       </div>
-    </main>
+    // </main>
   )
 }
 

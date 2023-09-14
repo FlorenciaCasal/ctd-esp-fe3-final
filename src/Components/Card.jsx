@@ -10,16 +10,25 @@ import DC from "../img/doctor.jpg"
 // const Card = ({ name, username, id }) => {
 
 const Card = ({dentista}) => {
-  const {favs, setFavs} = useDentistaStates()
+  // const {favs, setFavs} = useDentistaStates()
+  const {state, dispatch} = useDentistaStates()
+  const findDentista = state.favs.find(fav => fav.id == dentista.id)
+
 
    const addFav = () => {
      // Aqui iria la logica para agregar la Card en el localStorage
     
-      if (favs.find((dentFavoritos)=>dentFavoritos.id === dentista.id)){
-        alert("ya existe")
-      }else{
-        setFavs((prevFavs) => [...prevFavs, dentista]);
-        alert("Se agregó correctamente a Favoritos")
+      // if (favs.find((dentFavoritos)=>dentFavoritos.id === dentista.id)){
+      //   alert("ya existe")
+      // }else{
+      //   setFavs((prevFavs) => [...prevFavs, dentista]);
+      //   alert("Se agregó correctamente a Favoritos")
+      // }
+      if(findDentista){
+        //  deleteFav es un array nuevo con el elemento filtrado
+        dispatch({type: 'DELETE_FAV', payload: findDentista})
+      } else {
+        dispatch({type: 'ADD_FAV', payload: dentista})
       }
    }
  
@@ -42,8 +51,8 @@ const Card = ({dentista}) => {
         
 
       {/* Ademas deberan integrar la logica para guardar cada Card en el localStorage */}
-       <button onClick={addFav} className="favButton">💗</button> 
-      {/*<button onClick={() => setFavs((prevFavs) => [...prevFavs, dentista])}>⭐</button>*/}
+       <button onClick={addFav} className="favButton">{findDentista ? '💗' : '🖤'}</button> 
+      {/*<button onClick={() => setFavs((prevFavs) => [...prevFavs, dentista])}>💗</button>*/}
     </div>
   );
 };
