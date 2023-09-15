@@ -5,7 +5,7 @@ import { useState } from 'react'
 import { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { useDentistaStates } from '../Context/Context'
-
+import DC from "../img/doctor.jpg"
 
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
@@ -32,17 +32,34 @@ const Detail = () => {
   }, [])
 
   return (
-    <>
+    <div className='tab-container'>
       {/* aqui deberan renderizar la informacion en detalle de un user en especifico */}
       {/* Deberan mostrar el name - email - phone - website por cada user en especifico */}
-      <h1>Detalle</h1>
+      
+          <h2>Detalle</h2>
+          <img style={{marginBottom:'10px'}} src={DC} alt="" />
+
       <div>
-        <h1>Nombre: {name}</h1>
-        <h1>Email: {email}</h1>
-        <h1>Teléfono: {phone}</h1>
-        <h1>Sitio Web: {website}</h1>
+        <table>
+          <tr>
+            <td>Nombre: </td>
+            <td>{name}</td>
+          </tr>
+          <tr>
+            <td>Email: </td>
+            <td>{email}</td>
+          </tr>
+          <tr>
+            <td>Teléfono: </td>
+            <td>{phone}</td>
+          </tr>
+          <tr>
+            <td>Sitio Web: </td>
+            <td>{website}</td>
+          </tr>
+        </table>
       </div>
-    </>
+    </div>
   )
 }
 

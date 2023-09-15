@@ -24,28 +24,52 @@ h1,h2,h3,h4,p{
   text-align: center;
 }
 input {
-  border-color: aliceblue;
+  border-color:rgb(70, 70, 70);
   border-radius: 10px;
+  border: 1px solid #000000;
   margin-bottom: 1rem;
   padding: 0.5rem 1rem;
   box-shadow: 15px 5px 10px #48529944;
 
 }
-input[type="textarea"] {
+textarea {
   width: 100%;
   height: 90px;
-  padding: 0 25px;
-
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  border-color:rgb(70, 70, 70);
+  box-shadow: 20px 10px 15px #48529944;
 }
-
-
+.tab-container{
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+table{
+  font-size:x-large;
+  font-style: normal;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); 
+  border: 1px solid #ccc; 
+  border-radius: 5px;
+}
+td {
+  padding: 10px;
+  border: 1px solid #ccc; /* Agrega bordes internos a las celdas */
+}
 
 img{
   width: 150px;
 }
-div, .contact{
-  
+div, .contact{ 
   top: 50%;
+}
+
+.redes{
+  position: relative;
+  background-color: #000000;
+  height: 30px;
 }
 button{
   display:block;
@@ -61,28 +85,57 @@ button{
 .msmerror{
   position: absolute;
   color: red;
-
+  
 }
 .msmexito{
   position: absolute;
-  color: green;
   top: 20px;
 }
 
 .textoErrExit{
   position: relative;
 }
-
-nav{
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  
-  padding: 1rem;
+.msm{
+  position: absolute;
+  color: rgb(0, 0, 0);
+  top: 20px;
 }
 
-a{
-  
+.navbar{
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  height: 40px;
+  background-color: rgb(175, 175, 175);
+  padding: 1rem;
+  margin-bottom: 15px;
+  padding-right: 150px;
+  color: #000000;
+  /* position: fixed; 
+  top: 0;
+  z-index: 100; */
+}
+.navbar a {
+  color: #000000;
+}
+.navbar div{
+  display: flex;
+  align-items: center;
+}
+.dhOdonto{
+  margin-right: 15px;
+  font-size:xx-large;
+}
+.dhOdonto span{
+  color: crimson;
+}
+.menu{
+  display: flex;
+  align-items: center;
+  margin: 15px;
+}
+
+a{ 
   text-decoration: none;
   margin: 5px;
   cursor: pointer;
@@ -92,18 +145,34 @@ a:hover{
 } 
 
 footer {
-  display: flex;
-  justify-content: center;
   text-align: center;
-  padding: 2rem;
+  padding-top: 2rem;
   position: relative;
   bottom: 0;
-  width: 90%;
+  width: 100%;
   height: 40px;
-  margin-top: 20rem;
+
+
+}
+.redes {
+  height: 30px;
+  width: 30px;
+  padding: 2px;
+  border-radius: 5px;
+  margin: 2px;
+}
+.redes1{
+  display: flex;
+   align-items: center;
+
+}
+.logDH{
+  width: 100%;
+  background-color: crimson;
+ 
 }
 
-footer > img{
+footer .dh{
   width: 200px;
   margin: 0;
 }
@@ -115,6 +184,7 @@ footer > p{
   width: 100%;
   height: 40px;
   
+  
 }
 
 form{
@@ -125,6 +195,7 @@ form{
 }
 
 .card{
+   top: 100px; 
   display: flex;
   position: relative;
   justify-content: space-around;

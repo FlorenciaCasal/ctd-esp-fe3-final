@@ -9,8 +9,10 @@ import { useDentistaStates } from "../Context/Context";
 
 const Navbar = (theme) => {
 
-  const { toggleTheme } = useDentistaStates()
+  const {toggleTheme} = useDentistaStates()
+  const {tema} = toggleTheme
   // const { theme, handleChangeTheme } = useGlobalState();
+ //console.log( tema)
 
   const enlaces = [
     { id: 1, titulo: 'Home', route: '/' },
@@ -23,15 +25,20 @@ const Navbar = (theme) => {
   return (
     <nav>
 
-      <div style={{ display: 'flex', justifyContent: 'center' }}>
-        <button onClick={() => navigate(-1)}> ⬅ </button>
+      <div className='navbar'>
+        <div>
+          <p className='dhOdonto'><span>DH</span> Odonto</p>
+          <button onClick={() => navigate(-1)}> ⬅ </button>
+        </div>
+        <div className='menu'> 
         {enlaces.map((enlace) => (
           <Link to={enlace.route} key={enlace.id} >
-            <h4 style={{ margin: 10 }} >{enlace.titulo}</h4>
+            <h4  >{enlace.titulo}</h4>
           </Link>
         ))}
         <div className="theme">
-          <button onClick={toggleTheme}>🌛🌞</button>
+          <button onClick={toggleTheme}> {tema === 'ligth'? '🌞':'🌛'}</button>
+        </div>
         </div>
 
       </div>
