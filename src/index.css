@@ -195,7 +195,7 @@ form{
 }
 
 .card{
-   top: 100px; 
+   /* top: 100px;  */
   display: flex;
   position: relative;
   justify-content: space-around;
