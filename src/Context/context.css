@@ -26,15 +26,17 @@
     position: absolute;
     top: 50px;
     color: greenyellow;
-    width: auto;
-    width: max-content;
+    width: 100vw;
+    text-align: left;
+    
   }
   .dark .msmerror{
     position: absolute;
     color: orangered;
     margin-bottom: 20px;
-    width: auto;
-    width: max-content;  
+    width: 100vw;
+    text-align: left;
+     
   }
 
   button{
