@@ -7,10 +7,11 @@ import { useDentistaStates } from "../Context/Context";
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
-const Navbar = (theme) => {
+const Navbar = () => {
 
   const {toggleTheme} = useDentistaStates()
-  const {tema} = toggleTheme
+  //const {tema} = toggleTheme
+
   // const { theme, handleChangeTheme } = useGlobalState();
  //console.log( tema)
 
@@ -37,7 +38,8 @@ const Navbar = (theme) => {
           </Link>
         ))}
         <div className="theme">
-          <button onClick={toggleTheme}> {tema === 'ligth'? '🌞':'🌛'}</button>
+          {/* <button onClick={toggleTheme}> {tema === 'ligth'? 🌞 : 🌛}</button> */}
+          <button onClick={toggleTheme}> {document.body.className === 'dark' ? '🌞' : '🌛'}</button>
         </div>
         </div>
 

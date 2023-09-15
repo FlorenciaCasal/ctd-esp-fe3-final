@@ -22,6 +22,21 @@
     
   }
 
+  .dark .msmexito{
+    position: absolute;
+    top: 50px;
+    color: greenyellow;
+    width: auto;
+    width: max-content;
+  }
+  .dark .msmerror{
+    position: absolute;
+    color: orangered;
+    margin-bottom: 20px;
+    width: auto;
+    width: max-content;  
+  }
+
   button{
     display:block;
     padding: 0.5rem 1rem;
