@@ -1,56 +1,59 @@
+.light {
+  background-color: rgb(255, 255, 255);
+  color: rgb(39, 38, 38);
+}
 
+.dark {
+  background-color: rgb(60, 57, 57);
+  color: rgb(255, 255, 255);
+}
 
-.light{
-    background-color: rgb(255, 255, 255);
-    color: rgb(39, 38, 38);
-  }
-  
-  .dark{
-    background-color: rgb(60, 57, 57);
-    color: rgb(255, 255, 255);
-  }
-  .dark a {
-    color: white;
-  }
+.dark a {
+  color: white;
+}
 
-  .dark .buttonTema {
-    content: "\1F31A"; /* Código de Unicode para el icono de la luna */
-    
-  }
-  .ligth .buttonTema {
-    content: '🌛'; /* Código de Unicode para el icono del sol */
-    
-  }
+.dark .buttonTema {
+  content: "\1F31A";
+  /* Código de Unicode para el icono de la luna */
 
-  .dark .msmexito{
-    position: absolute;
-    top: 50px;
-    color: greenyellow;
-    width: 100vw;
-    text-align: left;
-    
-  }
-  .dark .msmerror{
-    position: absolute;
-    color: orangered;
-    margin-bottom: 20px;
-    width: 100vw;
-    text-align: left;
-     
-  }
+}
 
-  button{
-    display:block;
-    padding: 0.5rem 1rem;
-    border-radius: 10px;
-    border-color: rgba(38, 37, 37, 0.162);
-    width: fit-content;
-    cursor: pointer;
-    box-shadow: 15px 5px 10px #48529944;
-    
-  }
+.ligth .buttonTema {
+  content: '🌛';
+  /* Código de Unicode para el icono del sol */
 
-  .theme {
-    display: flex;
-    justify-content: center;
-  }
+}
+
+.dark .msmexito {
+  position: absolute;
+  top: 50px;
+  color: greenyellow;
+  width: 100vw;
+  text-align: left;
+
+}
+
+.dark .msmerror {
+  position: absolute;
+  color: orangered;
+  margin-bottom: 20px;
+  width: 100vw;
+  text-align: left;
+
+}
+
+button {
+  display: block;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  border-color: rgba(38, 37, 37, 0.162);
+  width: fit-content;
+  cursor: pointer;
+  box-shadow: 15px 5px 10px #48529944;
+
+}
+
+.theme {
+  display: flex;
+  justify-content: center;
+}

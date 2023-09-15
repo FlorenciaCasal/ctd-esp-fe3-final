@@ -11,27 +11,27 @@ const Footer = () => {
   return (
     <footer  >
       <div className='logDH'>
-        <img className='dh' src={DH}/>
+        <img className='dh' src={DH} />
       </div>
-     <div style={{display: 'flex', justifyContent: 'space-evenly'}}>
+      <div style={{ display: 'flex', justifyContent: 'space-evenly' }}>
         <h2>Florencia Casal & Luz Acosta  </h2>
         <div className='redes1'>
-          <a href="https://www.facebook.com"> 
-           <img className='redes' src={FB} alt="" />
+          <a href="https://www.facebook.com">
+            <img className='redes' src={FB} alt="" />
           </a>
-          <a href="http://www.instagram.com"> 
-           <img className='redes' src={IN} alt="" />
+          <a href="http://www.instagram.com">
+            <img className='redes' src={IN} alt="" />
           </a>
-          <a href="http://www.tiktok.com"> 
+          <a href="http://www.tiktok.com">
             <img className='redes' src={TT} alt="" />
           </a>
-          <a href="http://www.whatsapp.com"> 
+          <a href="http://www.whatsapp.com">
             <img className='redes' src={WP} alt="" />
           </a>
         </div>
-    
-     </div>
-      
+
+      </div>
+
     </footer>
   )
 }
