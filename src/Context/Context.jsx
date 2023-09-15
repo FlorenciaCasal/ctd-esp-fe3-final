@@ -4,13 +4,6 @@ import './context.css'
 
 
 const DentistaStates = createContext()
-// const reducer = (state, action) => {
-//     //accion para obtener todos los personajes
-//     //accion para realizar la paginacion 
-//     //accion para agregar favoritos
-//     //accion para borrar favoritos
-//     //accion para cambiar de tema
-// }
 
 const localFavs = JSON.parse(localStorage.getItem('favs'));
 const initialFavState = localFavs ? localFavs : [];

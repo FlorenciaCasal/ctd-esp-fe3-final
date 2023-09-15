@@ -9,7 +9,7 @@ import { useDentistaStates } from "../Context/Context";
 
 const Navbar = () => {
 
-  const {toggleTheme} = useDentistaStates()
+  const {toggleTheme, state} = useDentistaStates()
   //const {tema} = toggleTheme
 
   // const { theme, handleChangeTheme } = useGlobalState();
@@ -39,7 +39,8 @@ const Navbar = () => {
         ))}
         <div className="theme">
           {/* <button onClick={toggleTheme}> {tema === 'ligth'? 🌞 : 🌛}</button> */}
-          <button onClick={toggleTheme}> {document.body.className === 'dark' ? '🌞' : '🌛'}</button>
+          <button onClick={toggleTheme}> {state.theme === 'dark' ? '🌞' : '🌛'}</button>
+          
         </div>
         </div>
 
