@@ -1,6 +1,6 @@
 import { useDentistaStates } from "../Context/Context";
 import Card from "../Components/Card";
-import '../index.css'
+
 
 
 const Favs = () => {

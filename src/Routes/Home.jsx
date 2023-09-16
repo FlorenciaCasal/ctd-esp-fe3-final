@@ -1,7 +1,7 @@
 import Card from '../Components/Card';
 import React from "react";
 import { useDentistaStates } from '../Context/Context';
-import '../index.css'
+
 
 
 const Home = () => {

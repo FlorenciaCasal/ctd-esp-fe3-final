@@ -24,23 +24,23 @@
 
 }
 
-.dark .msmexito {
-  position: absolute;
-  top: 50px;
-  color: greenyellow;
-  width: 100vw;
-  text-align: left;
+ .dark .msmexito {
+   color: greenyellow;
+   /* width: 100vw;
+   position: absolute;
+   top: 50px;
+  text-align: left; */
 
 }
 
 .dark .msmerror {
-  position: absolute;
   color: orangered;
+  /* position: absolute;
   margin-bottom: 20px;
   width: 100vw;
-  text-align: left;
+  text-align: left; */
 
-}
+} 
 
 button {
   display: block;

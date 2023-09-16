@@ -34,20 +34,18 @@ function ContactForm() {
   return (
 
     <form onSubmit={handleSubmit}>
-      <div className="formContact">
+      {/* <div className="formContact"> */}
         <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" value={usuario.nombre} onChange={handleInputChange} required />
         <input type="email" id="email" name="email" placeholder="Email" value={usuario.email} onChange={handleInputChange} required />
-        <textarea rows={10} cols={30} id="comentarios" name="comentarios" placeholder="Comentarios" value={usuario.comentarios} onChange={handleInputChange} required />
-      </div>
-
-      <div>
+        <textarea rows={10}  id="comentarios" name="comentarios" placeholder="Comentarios" value={usuario.comentarios} onChange={handleInputChange} required />
+      
         <button className="enviar" ype="submit">Enviar</button>
-      </div>
+      
 
-      <div className="textoErrExit">
+      {/* <div className="textoErrExit"> */}
         {mensaje && <h4 className="msmexito">{mensaje}</h4>}
         {error && <h3 className="msmerror">Por favor verifique su información nuevamente</h3>}
-      </div>
+      {/* </div> */}
     </form>
 
   );

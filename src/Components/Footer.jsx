@@ -13,7 +13,7 @@ const Footer = () => {
       <div className='logDH'>
         <img className='dh' src={DH} />
       </div>
-      <div style={{ display: 'flex', justifyContent: 'space-evenly' }}>
+      <div className='logosredes'>
         <h2>Florencia Casal & Luz Acosta  </h2>
         <div className='redes1'>
           <a href="https://www.facebook.com">

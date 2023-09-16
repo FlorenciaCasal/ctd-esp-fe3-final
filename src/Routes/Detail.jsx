@@ -4,7 +4,7 @@ import { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { useDentistaStates } from '../Context/Context'
 import DC from "../img/doctor.jpg"
-import '../index.css'
+
 
 
 const Detail = () => {
